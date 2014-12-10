@@ -103,6 +103,7 @@
         //delete event
         map.on('draw:deleted', function () {
             var shapes = getShapes(drawnItems);
+            //picking coordinates after delete if any
             $('#val1').html(shapes);
             $('#val').html(shapes);
         });
