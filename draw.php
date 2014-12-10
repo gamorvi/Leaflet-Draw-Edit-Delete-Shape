@@ -6,7 +6,10 @@
  * and open the template in the editor.
  */
 if(isset($_POST['transform'])){
-    echo str_replace("LatLng", "", str_replace(")", "]", str_replace( "(", "[",$_POST['val'] ) ) ); 
+    $arr = explode( 'geo', str_replace("LatLng", "", str_replace(")", "]", str_replace( "(", "[",$_POST['val'] ) ) ) );
+    echo '<pre>';
+    print_r($arr);
+    echo '<pre>';
 }
 
 
