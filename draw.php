@@ -1,19 +1,4 @@
-<?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-if(isset($_POST['transform'])){
-    $arr = explode( 'geo', str_replace("LatLng", "", str_replace(")", "]", str_replace( "(", "[",$_POST['val'] ) ) ) );
-    echo '<pre>';
-    print_r($arr);
-    echo '<pre>';
-}
-
-
-?>
 <html>
     <head>
         <title>My Map</title>
@@ -147,7 +132,18 @@ if(isset($_POST['transform'])){
         return shapes;
     };
         </script>
-         
+<?php
+
+
+if(isset($_POST['transform'])){
+    $arr = explode( 'geo', str_replace("LatLng", "", str_replace(")", "]", str_replace( "(", "[",$_POST['val'] ) ) ) );
+    echo '<pre>';
+    print_r($arr);
+    echo '<pre>';
+}
+
+
+?>  
     </body>
 </html>
 
